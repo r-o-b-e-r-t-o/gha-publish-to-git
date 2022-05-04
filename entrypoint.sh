@@ -75,6 +75,8 @@ cd "${WORK_DIR}"
 #
 echo "Initializing repository with remote ${REMOTE}"
 git init || exit 1
+echo "Setting this directory as safe..."
+git config --global --add safe.directory $(pwd)
 git config --local user.email "${COMMIT_EMAIL}" || exit 1
 git config --local user.name  "${COMMIT_AUTHOR}" || exit 1
 git remote add origin "${REMOTE}" || exit 1
