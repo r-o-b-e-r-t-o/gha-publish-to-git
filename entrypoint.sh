@@ -82,14 +82,14 @@ git config --local user.name  "${COMMIT_AUTHOR}" || exit 1
 git remote add origin "${REMOTE}" || exit 1
 
 # init git LFS
-git lfs install
-if [ $? -eq 0 ]
-then
-  echo "Initialized git LFS"
-else
-  echo "Could not initialize git LFS" >&2
-  exit 1
-fi
+#git lfs install
+#if [ $? -eq 0 ]
+#then
+#  echo "Initialized git LFS"
+#else
+#  echo "Could not initialize git LFS" >&2
+#  exit 1
+#fi
 
 # Fetch initial (current contents).
 #
